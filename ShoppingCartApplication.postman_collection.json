@@ -1,0 +1,294 @@
+{
+	"id": "5624661e-6117-47a1-b02f-798ee3455522",
+	"name": "ShoppingCartApplication",
+	"description": null,
+	"auth": null,
+	"events": null,
+	"variables": null,
+	"order": [],
+	"folders_order": [
+		"1b536a77-1c73-4fc7-9d8d-e340e23302d8",
+		"dc81ffcc-329a-432f-87e8-fecf6a6c81c2",
+		"b21fa1fb-1268-4922-b87a-e66efbbb522c"
+	],
+	"folders": [
+		{
+			"id": "b21fa1fb-1268-4922-b87a-e66efbbb522c",
+			"name": "GET /api/v1/cart",
+			"description": "cart service to provide following operations:\n1. Add product to cart\n2. update product quantity\n3. remove single product from cart\n4. remove all products\n5. view cart items",
+			"auth": null,
+			"events": null,
+			"collection": "5624661e-6117-47a1-b02f-798ee3455522",
+			"folder": null,
+			"order": [
+				"e6760a21-352d-4f52-9786-692072b07873",
+				"73a414f2-56c3-4279-9461-da8535fdac43",
+				"7e697f44-0d88-4593-b919-01777b71216d",
+				"39b7186c-5e6b-445b-966a-b981545a4388",
+				"089bddba-014c-4c1e-a921-71b1916fb719"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "1b536a77-1c73-4fc7-9d8d-e340e23302d8",
+			"name": "GET /api/v1/products",
+			"description": "This contains product services to retrieve products by name, id, type",
+			"auth": null,
+			"events": null,
+			"collection": "5624661e-6117-47a1-b02f-798ee3455522",
+			"folder": null,
+			"order": [
+				"36746185-cd71-451d-951d-528c333f1548",
+				"2de3093f-2062-4e13-8cbd-bf44f3f2b4ad",
+				"3e943cd5-9a12-4998-8e88-b90a89bf9e77",
+				"1b8f3f7a-b285-4393-acad-6c9a7c964987"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "dc81ffcc-329a-432f-87e8-fecf6a6c81c2",
+			"name": "GET /api/v1/users/",
+			"description": "user service to retrieve user information by id",
+			"auth": null,
+			"events": null,
+			"collection": "5624661e-6117-47a1-b02f-798ee3455522",
+			"folder": null,
+			"order": [
+				"e9adc49f-23ec-400b-8c23-33bb75be8c4a"
+			],
+			"folders_order": []
+		}
+	],
+	"requests": [
+		{
+			"id": "089bddba-014c-4c1e-a921-71b1916fb719",
+			"name": "update product quantity",
+			"url": "http://localhost:8080/api/v1/cart/user/1/updateProduct/1/quantity/2",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "b21fa1fb-1268-4922-b87a-e66efbbb522c",
+			"rawModeData": "",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "1b8f3f7a-b285-4393-acad-6c9a7c964987",
+			"name": "Get product by type",
+			"url": "http://localhost:8080/api/v1/products/getProducts/type/book",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "1b536a77-1c73-4fc7-9d8d-e340e23302d8",
+			"rawModeData": "",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "2de3093f-2062-4e13-8cbd-bf44f3f2b4ad",
+			"name": "Get product by id",
+			"url": "http://localhost:8080/api/v1/products/getProducts/1",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "1b536a77-1c73-4fc7-9d8d-e340e23302d8",
+			"rawModeData": "",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "36746185-cd71-451d-951d-528c333f1548",
+			"name": "Get all products",
+			"url": "http://localhost:8080/api/v1/products/getProducts",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "1b536a77-1c73-4fc7-9d8d-e340e23302d8",
+			"rawModeData": "",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "39b7186c-5e6b-445b-966a-b981545a4388",
+			"name": "add product to cart",
+			"url": "http://localhost:8080/api/v1/cart/user/1/addProduct/1",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "b21fa1fb-1268-4922-b87a-e66efbbb522c",
+			"rawModeData": "",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3e943cd5-9a12-4998-8e88-b90a89bf9e77",
+			"name": "Get product by name",
+			"url": "http://localhost:8080/api/v1/products/getProducts/name/White formal shirt",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "1b536a77-1c73-4fc7-9d8d-e340e23302d8",
+			"rawModeData": "",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "73a414f2-56c3-4279-9461-da8535fdac43",
+			"name": "remove all products",
+			"url": "http://localhost:8080/api/v1/cart/user/1/removeAll",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "b21fa1fb-1268-4922-b87a-e66efbbb522c",
+			"rawModeData": "",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "7e697f44-0d88-4593-b919-01777b71216d",
+			"name": "remove product",
+			"url": "http://localhost:8080/api/v1/cart/user/2/removeProduct/2",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "b21fa1fb-1268-4922-b87a-e66efbbb522c",
+			"rawModeData": "",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e6760a21-352d-4f52-9786-692072b07873",
+			"name": "view cart items",
+			"url": "http://localhost:8080/api/v1/cart/user/1/viewCart",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "b21fa1fb-1268-4922-b87a-e66efbbb522c",
+			"rawModeData": "",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e9adc49f-23ec-400b-8c23-33bb75be8c4a",
+			"name": "Get user by id",
+			"url": "http://localhost:8080/api/v1/users/getUsers/1",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "dc81ffcc-329a-432f-87e8-fecf6a6c81c2",
+			"rawModeData": "",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		}
+	]
+}
